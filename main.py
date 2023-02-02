@@ -3,7 +3,7 @@ from pprint import pprint
 
 
 class Cow:
-    'Корова'
+    """Корова"""
     def __init__(self, name, weight, satiety=5, voice="Мууу"):
         self.name = name
         self.weight = weight
@@ -23,11 +23,11 @@ class Cow:
             return 'Надоили 1 ведро молока.'
         else:
             return 'Нужно покормить'
-    pass
+
 
 
 class Goat:
-    'Коза'
+    """Коза"""
     def __init__(self, name, weight, satiety=5, voice="Меее"):
         self.name = name
         self.weight = weight
@@ -43,11 +43,10 @@ class Goat:
             return 'Надоили 1 литр молока.'
         else:
             return 'Нужно покормить'
-    pass
 
 
 class Ram:
-    'Баран'
+    """Баран"""
     def __init__(self, name, weight, satiety=5, voice="Беее"):
         self.name = name
         self.weight = weight
@@ -67,11 +66,10 @@ class Ram:
             return 'Настригли 1 корзину шерсти.'
         else:
             return 'Нужно покормить.'
-    pass
 
 
 class Goose:
-    'Гусь'
+    """Гусь"""
     def __init__(self, name, weight, satiety=5, voice="Гага"):
         self.name = name
         self.weight = weight
@@ -94,7 +92,7 @@ class Goose:
 
 
 class Hen:
-    'Курица'
+    """Курица"""
     def __init__(self, name, weight, satiety=5, voice="Коооо"):
         self.name = name
         self.weight = weight
@@ -117,7 +115,7 @@ class Hen:
 
 
 class Duck:
-    'Утка'
+    """Утка"""
     def __init__(self, name, weight, satiety=5, voice="Крякря"):
         self.name = name
         self.weight = weight
@@ -159,10 +157,10 @@ def main():
         total_weight = total_weight + animal.weight
         if weight < animal.weight:
             weight = animal.weight
-            name_animal_max_weight = animal.__doc__
+            name_animal_max_weight = animal.name
 
     print(f'Общий вес животных: {total_weight}.')
-    print(f'Самое тяжелое жимотное: {name_animal_max_weight}.')
+    print(f'Самое тяжелое животное: {name_animal_max_weight}.')
 
 
 if __name__ == __name__:
