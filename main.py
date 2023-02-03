@@ -4,11 +4,13 @@ from pprint import pprint
 
 class Cow:
     """Корова"""
-    def __init__(self, name, weight, satiety=5, voice="Мууу"):
+    animal_type = "Корова"
+    speak = "Мууу"
+
+    def __init__(self, name, weight, satiety=5):
         self.name = name
         self.weight = weight
         self.satiety = satiety
-        self.voice = voice
 
     def feed(self, eat):
         self.satiety += eat
@@ -28,11 +30,13 @@ class Cow:
 
 class Goat:
     """Коза"""
-    def __init__(self, name, weight, satiety=5, voice="Меее"):
+    animal_type = "Коза"
+    speak = "Меее"
+
+    def __init__(self, name, weight, satiety=5):
         self.name = name
         self.weight = weight
         self.satiety = satiety
-        self.voice = voice
 
     def milking(self):
         if self.satiety >= 5:
@@ -47,11 +51,13 @@ class Goat:
 
 class Ram:
     """Баран"""
-    def __init__(self, name, weight, satiety=5, voice="Беее"):
+    animal_type = "Баран"
+    speak = "Беее"
+
+    def __init__(self, name, weight, satiety=5):
         self.name = name
         self.weight = weight
         self.satiety = satiety
-        self.voice = voice
 
     def feed(self, eat):
         self.satiety += eat
@@ -70,11 +76,13 @@ class Ram:
 
 class Goose:
     """Гусь"""
-    def __init__(self, name, weight, satiety=5, voice="Гага"):
+    animal_type = "Гусь"
+    speak = "Гага"
+
+    def __init__(self, name, weight, satiety=5):
         self.name = name
         self.weight = weight
         self.satiety = satiety
-        self.voice = voice
 
     def feed(self, eat):
         self.satiety += eat
@@ -93,11 +101,13 @@ class Goose:
 
 class Hen:
     """Курица"""
-    def __init__(self, name, weight, satiety=5, voice="Коооо"):
+    animal_type = "Курица"
+    speak = "Коооо"
+
+    def __init__(self, name, weight, satiety=5):
         self.name = name
         self.weight = weight
         self.satiety = satiety
-        self.voice = voice
 
     def feed(self, eat):
         self.satiety += eat
@@ -116,11 +126,13 @@ class Hen:
 
 class Duck:
     """Утка"""
-    def __init__(self, name, weight, satiety=5, voice="Крякря"):
+    animal_type = "Утка"
+    speak = "Крякря"
+
+    def __init__(self, name, weight, satiety=5):
         self.name = name
         self.weight = weight
         self.satiety = satiety
-        self.voice = voice
 
     def feed(self, eat):
         self.satiety += eat
@@ -157,7 +169,7 @@ def main():
         total_weight = total_weight + animal.weight
         if weight < animal.weight:
             weight = animal.weight
-            name_animal_max_weight = animal.name
+            name_animal_max_weight = str(f'{animal.animal_type} "{animal.name}"')
 
     print(f'Общий вес животных: {total_weight}.')
     print(f'Самое тяжелое животное: {name_animal_max_weight}.')
